@@ -6,16 +6,12 @@
 
 <script setup lang="ts">
 import { ref, watch } from "vue"
-import { makeRequest } from "./api/makeRequest";
+import { suggest } from "@/api/rest/suggest";
 import AInput from "./components/a-input.vue"
 
 const value = ref("")
 
-watch(() => value.value, (current) => makeRequest({
-  url: "https://dadata.ru/api/suggest/name/",
-  method: "POST",
-  data: current,
-}))
+watch(() => value.value, suggest)
 </script>
 
 <style lang="postcss">
