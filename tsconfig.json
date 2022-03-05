@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    },
     "types": [
       "node"
     ],
