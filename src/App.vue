@@ -5,11 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue"
-import { suggest } from "@/api/rest/suggest";
-import AInput from "./components/a-input.vue"
+import { ref, watch } from 'vue'
+import { suggest } from '@/api/rest/suggest'
+import AInput from './components/a-input.vue'
 
-const value = ref("")
+const value = ref('')
 
 watch(() => value.value, suggest)
 </script>
@@ -19,6 +19,6 @@ watch(() => value.value, suggest)
   margin: 0 auto;
   height: 24rem;
   max-width: 17.5rem;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 }
 </style>

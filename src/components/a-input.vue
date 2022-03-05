@@ -1,15 +1,15 @@
 <template>
-	<input
+  <input
     class="input"
     type="text"
     :value="value"
     :placeholder="placeholder"
     @input="input"
-  >
+  />
 </template>
 
 <script lang="ts" setup>
-import { getEventValue } from "@/utils"
+import { getEventValue } from '@/utils'
 
 type Props = {
   value: string
@@ -17,7 +17,7 @@ type Props = {
 }
 
 withDefaults(defineProps<Props>(), {
-  placeholder: ""
+  placeholder: '',
 })
 
 const emit = defineEmits<{
@@ -32,14 +32,14 @@ const input = (event: Event) => {
 <style lang="postcss">
 .input {
   display: block;
-	padding: 0.875rem 1rem;
+  padding: 0.875rem 1rem;
   box-sizing: border-box;
-  border: 1px solid #C4C4C4;
-	width: 100%;
-	height: 3.3125rem;
+  border: 1px solid #c4c4c4;
+  width: 100%;
+  height: 3.3125rem;
   font-size: 0.75rem;
   line-height: 0.875rem;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #000000;
 }
 </style>

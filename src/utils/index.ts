@@ -1,8 +1,9 @@
 export const getEventValue = (event: Event): string => {
   const target = event.target
 
-  if (!target) return ""
+  if (!target) return ''
 
-  // @ts-ignore
-  return target.value || ""
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  return target.value || ''
 }
